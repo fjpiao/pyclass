@@ -1,0 +1,163 @@
+GIT
+配置当前系统 git config --system [选项]
+/etc/gitconfig
+
+配置当前用户 git config --global [选项]
+~/.gitconfig
+
+配置当前项目 git config [选项]
+/.git/config
+
+配置用户名
+    user.name Tedu
+配置用户邮箱
+    user.email ...@...
+配置编译器
+    git config core.editor vscode
+查看项目配置信息
+    git config --list
+
+git init
+    将某个项目目录变为git操作目录
+    生成git本地仓库 
+    该目录即可使用git进行管理
+查看分支状态
+    git status
+    说明 初始默认工作分支为master 当工作区和仓库不一致时 
+    会有相应提示信息
+将工作区内容记录到暂存区
+    git add file1 file2
+    git add *(全部文件)
+取消文件暂存记录
+    git rm --cached [file]
+将文件同步到本地仓库区
+    git commit -m [message]
+    message:消息记录 
+查看commit日志
+    git log
+    git log --pretty=oneline
+文件比较:
+    git diff [file]
+    说明:用于比较工作区文件和仓库文件差异
+放弃工作区修改
+    git checkout -- [file]
+从仓库恢复文件
+    git checkout [file]
+移动或删除文件并提交暂存
+git mv [file] [path] 移动文件
+git rm [file] 删除文件
+
+版本控制命令
+退回到上一个commit节点
+    git reset --hard HEAD^
+    一个^表示后退一个commit
+去往指定的commit操作节点:
+    git reset --hard [commit_id]
+查看所有commit记录
+    git reflog
+标签创建于当前标签
+    git tag [名称] -m [message]
+    标签的message信息可以不写，但是最好添加
+查看标签
+    git tag  查看当前tag状态
+    git show [名称] 查看标签具体信息
+将标签添加到指定的commit_id:
+    git tag [名称] [commit_id] -m  
+去往某个标签节点
+    git reset --hard [tag]
+删除标签
+    git tag -d [tag]
+创建临时保存工作区
+    git stash
+    说明 将工作区未提交的修改封存，让工作区回到修改前状态
+    git stash list
+    查看临时工作区列表
+    git stash drop stash@{0}
+    git stash clear
+    删除工作
+    git stash drop [stash] 删除某一个工作区
+    git stash clear 删除所有保存的工作区
+分支操作命令
+    查看分支情况
+    git branch
+    创建新的分支
+    git branch [branch_name]
+    *基于某个分支创建新分支的时候原有分支最好是干净的
+    切换工作分支
+    git checkout [branch]
+    创建并切换
+    git checkout -b [branch]
+    合并分支
+    git merge [branch]
+    *合并分支过程中可能产生冲突，需要手动解决
+    在分支操作中尽量添加新的模块，不要修改原有代码内容
+    删除分支
+    git branch -d [branch]
+    *没有被合并的分支不能使用该命令删除
+    创建自己的共享库
+    选择共享库目录，设置目录属主
+    mkdir gitrepo
+    chown tarena:tarena gitrepo
+    初始化该目录为git仓库 
+    cd gitrepo/
+    git init --bare tedu.git
+    *tedu为共享项目名称，.git为习惯后缀
+    将配置git目录设置为共享仓库目录相同的目录
+    git chown -R tarena:tarena tedu.git
+    创建共享仓库连接
+    git remote add origin tarena@127.0.0.1:/home/tarena/gitrepo/fjpiao.git
+    注意：
+        该操作要在本地的一个git项目中执行
+        与远程主机的连接默认使用SSH方法
+        origin是给远程主机起的名字
+    删除远程主机
+    git remote rm [origin]
+        连接多个远程主机 远程主机名是不能重复的
+    
+    将本地分支推送到远程共享仓库
+    git push -u origin master
+    git push -u origin [分支]
+        *-u表示建立对应分支自动关联，一般首次向远程推送某个分支时使用
+    git branch -a 可以查看连接的远程分支
+    git push origin:[branch] 可以删除远程分支
+
+    获取远程仓库项目
+    git clone tarena@127.0.0.1:/home/tarena/gitrepo/fjpiao.git
+        *通过clone获取的远程项目到本地直接就是一个git本地仓库，
+        并且与远程建立好了连接
+
+    从远程获取最新代码
+    git pull
+    clone后本地项目与远程已经建立关联，pull可以直接拉取代码到对应分支
+
+    从远程获取最新内容到本地
+    git fetch
+        注意: pull是直接将远程分支内容拉取到本地，并和当前工作分支进行合并;
+        fetch是将远程分支内容拉取到本地显示的对应远程分支中，如果想和当前分支
+        合并需要再进行merge操作
+    git fetch origin master:tmp 
+        可以将远程master分支内容拉取到本地的
+        新建分支tmp中
+    git push origin [tag]
+        推送标签
+    git push origin --force origin
+        推送版本落后于远程版本时 
+
+连接github
+git remote rm origin
+    解除之前的连接
+git remote add origin https://github.com/fjpiao/tarenaAID1812.git
+    创立连接
+git push -u origin master
+    上传内容
+
+github连接方式选择
+    使用https方式连接github后，每次向github上传内容都需要输入github用户和密码
+    使用ssh方式连接github后，每次向github上传内容不需要用户名和密码，但是需要提前将固定的主机设置为信任，即添加ssh密钥
+    设置方法
+        在linux下使用ssh-keygen命令生成密钥 密钥默认存放在/home/tarena/.ssh/路径下
+        复制该路径下的id_rsa.pub内容
+        github帐号 右上角下拉选择settings
+        左侧SSH and GPG keys,new ssh key,添加复制的公钥内容，添加
+
+
