@@ -1,0 +1,62 @@
+flask
+
+1.静态网页 与 动态网页
+    1.静态网页：无法与服务器做动态数据交互的网页是静态网页
+    2.动态网页: 可以与服务器做动态数据交互的网页是动态网页
+2.WEB 与 服务器
+    1.什么是WEB
+        网页
+    2.服务器 Server
+        1.什么是服务器
+            能够给用户提供服务的机器就是服务器
+        2.硬件 与 软件
+            1.硬件
+                小到一台主机 大到服务器群
+            2.软件
+                一个能够接受用户请求并给出响应的程序
+                常用的服务器端软件:
+                1.APACHE SOFTWARE
+                2.TOMCAT
+                3.IIS-Internet Information Service
+                4.Nginx
+        3.服务器作用
+            1.存储web上的信息
+            2.能够处理用户的请求(request)并给出响应(response)
+            3.执行服务器端的处理程序
+            4.具备基本的安全功能
+3.框架
+    1.什么是框架
+        框架是一个为了解决开放性问题而存在的程序结构
+    2.Python Web框架
+        1.Flask - 轻量级框架
+        2.Webpy - 轻量级框架
+        3.Tornado - 异步框架
+        4.Django - 重量级框架 功能多
+    3.框架模式
+        1.框架模式
+            框架中各部分的组件的交互方式 
+        2.常用的模式
+            1.MTV
+                M:Mobels,模型层,与数据库交互
+                T:Templates,模板层,html
+                V:Views,视图层,与用户打交道(请求和响应)
+            2.MVC
+                M:Mobels,模型层,与数据库交互
+                V:Views,视图层,html
+                C:Controllar,控制器,与用户打交道(请求和响应)
+
+4.Flask框架
+    1.什么是Flask
+        Flask是一个基于Python并且依赖于Jinja2模板引擎和Werkzeug
+        WSGI服务的微型框架(Micro Framework)
+        WSGI:Web Server Gateway Interface (WEB服务网关接口)
+            连接python解释器和web端
+        Flask自带测试服务器
+    2.安装Flask
+        1.查看已安装的版本
+            进入到Python交互模式
+            >>>import flask
+            >>>flask.__version__
+        2.安装Flask
+            sudo pip3 install flask
+
