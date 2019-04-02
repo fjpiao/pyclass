@@ -1,4 +1,0 @@
-chmod 775 httpserver.py
-./httpserver.py
-
-请求行 头 体是
