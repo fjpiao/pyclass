@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>lesson sample</title>
+    </head>
+    <body>
+    <form action='login.py' method='get' enctype=''>
+    <!-- 文本框和密码框 -->
+        <p>
+            用户姓名:
+            <!-- name必填 value设置初始值 maxlength最大输入值-->
+            <input type='text' name='username' value='输入姓名' maxlength="10">
+        </p>
+        <p>
+            用户密码:
+            <!-- placeholder输入之前的提示文本 -->
+            <input type='password' name='upwd' placeholder='密码由数字和字母组成'>
+        </p>
+        <!-- 单选钮和复选框 -->
+        <p>
+            用户性别:
+            <!-- 一组按钮控件的name保持一致 将value值传给name checked表示默认选中-->
+            <input type='radio' name='gender' value='male' checked>男
+            <input type='radio' name='gender' value='female'>女
+        </p>
+        <p>
+            用户爱好:
+            <input type='checkbox' name='hobby' value='music' id='music'><label for='music'>音乐</label>
+            <input type='checkbox' name='hobby' value='study' checked >学习
+            <input type='checkbox' name='hobby' value='dota2'>dota2
+        </p>
+        <!-- 隐藏域和文件选择 -->
+        <input type='hidden' name='uid' value='001'>
+        <p>
+            用户头像:
+            <input type='file' name='uimg'>
+        </p>
+        <!-- 下拉菜单 -->
+        <!-- selected 默认 -->
+        <p>
+            选择城市:
+            <select name='city'>
+                <option value='beijing'>北京</option>
+                <option value='shanghai'>上海</option>
+                <option value='guangzhou'>广州</option>
+                <option value='shenzhen' selected>深圳</option>
+            </select>
+        </p>
+        <!-- 多行文本域 -->
+        <p>
+            个人介绍:
+            <textarea name='userInfo'></textarea>
+        </p>
+        <!-- 按钮 -->
+        <p>
+            <!-- value用来设置按钮的显示文本 -->
+            <input type='submit' value='注册'>
+            <input type='reset' value='清空'>
+            <input type='button' value='点击'>
+        </p>
+        <!--
+        file:///C:/Users/Python/Desktop/web/login.py?
+        username=%E6%9D%8E%E5%9B%9B
+        &upwd=123
+        &gender=male
+        &hobby=study
+        &uid=001
+        &uimg=ship.bmp
+        &city=shenzhen
+        &userInfo=sss
+        -->
+    <!-- form内 相当于提交-->
+    <button>form内</button>
+    </form>
+<!-- 绑定单击事件 alert()警告框提示 -->
+    <button onclick='alert("按钮被单击")'>form外</button>
+    </body>
+</html>

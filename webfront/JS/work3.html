@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    var score=prompt('输入分数:');
+    var res=score>=90? 'A':score>=80? 'B':score>=60? 'C':'D';
+    console.log(score,res);
+    var weight=prompt('输入体重kg:');
+    var height=prompt('输入身高m:');
+    var bmi=weight/(height*height);
+    var res=bmi>23.9?'肥胖':bmi<18.5?'消瘦':'正常';
+    console.log('bmi=',bmi,res);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

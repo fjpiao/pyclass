@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <style>
+    #d1{
+        color:red;
+    }   
+    .c1{
+        background:green;
+    }
+    </style>   
+</head>
+<body>
+    <h1 style='color:blue;background:orange;'>标题1</h1>
+    <p>段落</p>
+    <div>参考文本</div>
+    <script>
+        var h1 = document.getElementsByTagName('h1')[0];
+        h1.id='d1';
+        h1.className='c1';
+        //h1.style获取样式表对象，包含所有的CSS属性，
+        //可以再次点语法操作,CSS中所有使用连接符的属性，
+        //在JS中一律改为驼峰标识
+        console.log(h1.style);
+
+        var p=document.getElementsByTagName('p')[0];
+        p.style.color = 'red';
+        p.style.backgroundColor = 'green';
+        p.style.fontSize='20px';
+        
+        var div=document.getElementsByTagName('div')[0];
+        div.style = 
+        'width:200px;height:200px;background:orange;text-align:center;line-height:200px;'
+    </script>
+</body>
+</html>

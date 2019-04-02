@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //判断闰年
+    var year=prompt('输入年份:');
+    var res=year%400==0 || (year%4==0 && year%100!=0);
+    console.log('结果为:',res);
+
+    var data=prompt('输入一个字符');
+    
+    var res= '0'<= data && data<='9';
+    console.log('是否为数字',res);
+    //一~\u9fa5
+    var res= data >= '\u4e00' && data <= '\u9fa5';
+    console.log('是否为中文',res);
+    //判断字母
+    var res= data >= 'A' && data <= 'Z' || data >= 'a' && data <= 'z';
+    console.log('是否为英文',res);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

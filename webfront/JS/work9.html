@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+        function isRun(year){
+            return year%4==0&&year%100!=0||year%400==0
+            }
+        function totalDay(year,month,day){
+            var sum=0
+            for(var i=1990;i<year;i++){
+                sum+=365;
+                if(isRun(i)){sum++}
+                }
+            for(var j=1;j<month;j++){
+                switch(j){
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                        sum+=31;
+                        break
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        sum+=30;
+                        break
+                    case 2:
+                        sum+=28;
+                        if(isRun(year)){sum++;}
+                        break
+                    }
+                j++
+                }
+            sum+=day;
+            var week=sum%7;
+            var show='';
+            switch(week){
+            case 0:
+                show='日'
+                break
+            case 1:
+                show='一'
+                break
+            case 2:
+                show='二'
+                break
+            case 3:
+                show='三'
+                break
+            case 4:
+                show='四'
+                break
+            case 5:
+                show='五'
+                break
+            case 6:
+                show='六'
+                break
+            }
+            return show;
+
+        }
+    </script>
+    
+    
+</head>
+<body>
+
+</body>
+</html>

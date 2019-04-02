@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <input type='text' name=''>
+    <button onclick='changeLink()'>换链接</button>
+    <a href='#'>超链接</a>
+    <script>
+        function show(){
+            //获取元素
+            var input=
+            document.getElementsByTagName('input')[0];
+            var div=
+            document.getElementsByTagName('div')[0];
+            //传值
+            var str=input.value;
+            div.innerHTML='<h1>'+input.value+'</h1>';
+        }
+    function changeLink(){
+        //获取超链接
+        var a = document.getElementsByTagName('a')[0];
+        a.href = 'http://www.tmooc.cn';
+    }
+    </script>
+</body>
+</html>

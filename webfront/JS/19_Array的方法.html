@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    var arr=[1,2,3,4,5];
+    //操作数组的末尾元素
+    //push返回值为列表长度
+    var r1=arr.push('a','b');
+    console.log(r1,arr);
+    var r2=arr.pop();
+    console.log(r2,arr);
+    //操作数组头部元素
+    arr.unshift(10);
+    var r3=arr.unshift(40,30,20);//多个元素整体添加
+    console.log(r3,arr)
+    var r4=arr.shift();
+    console.log(r4,arr);
+    //数组转换字符串
+    var r5=arr.toString();
+    console.log(r5,typeof r5,arr);
+    //元素之间默认使用逗号连接，等同于toString()
+    var r6=arr.join();
+    //指定元素之间的连接符
+    var r7=arr.join('');
+    console.log(r6,r7)
+    //数组倒序重排
+    var r8=arr.reverse();
+    console.log(r8,arr);
+    //排序
+    var r9=arr.sort();
+    console.log(r9,arr);
+    //自定义排序 实现number值的从小到大排列
+    function sortASC(a,b){//自动传入相邻两个元素
+        //如果a-b>0 自动交换两个元素的位置
+        return a-b;
+    }
+    arr.pop()
+    arr.sort(sortASC);
+    console.log(arr);
+    //自定义number的降序排列
+    arr.sort(function (a,b){return b-a})
+    console.log(arr)
+    //forEach()遍历数组
+    arr.forEach(function(elem,index){
+        console.log(elem,index);
+    });
+    arr.forEach(function(elem){
+        console.log(elem);
+    });
+    //二维数组
+    var arr=[[1],[2,3],[4,5,6]];
+    //遍历外层数组
+    for(var i=0;i<arr.length;i++){
+    //取到内层数组
+        var array=arr[i];
+    //遍历内层数组
+        for(var j=1;j<array.length;j++){
+            console.log(array[j]);
+        }
+    }
+
+    </script>
+
+    
+</head>
+<body>
+
+</body>
+</html>

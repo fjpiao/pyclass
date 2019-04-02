@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+        // //求1-100的和
+        // var i = 1;
+        // var sum = 0;
+        // while (i<101){
+        //      console.log(i);
+        //      sum+=i;
+        //      i ++;
+        // }
+        // console.log(sum);
+        // //求能被三整除的数
+        // var j = 1;  
+        // while(j<101){
+        //     if(j%3==0){
+        //         console.log(j);
+        //     }
+        //     j++;
+        // }
+        //日期计算器
+        var year = prompt('请输入年份');
+        var month = prompt('请输入月');
+        //转换number做天数累加
+        var day = Number(prompt('请输入日'));
+        var sum = 0;//记录总天数
+        var isRun = year%4==0&&year%100!=0||year%400==0;
+        //1.整月天数的累加 month-1
+        var i = 1;
+        while(i<month){//1~month-1个整月
+            switch(i){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                    sum+=31;
+                    break
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    sum+=30;
+                    break
+                case 2:
+                    sum+=28;
+                    if(isRun)//if省略括号 只控制其后的第一行语句
+                        sum++;
+                    break
+            }
+            i++
+        }
+        //2.当月天数累加
+        sum+=day;
+        console.log('',sum)
+
+     
+         </script>
+</head>
+<body>
+
+</body>
+</html>

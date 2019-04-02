@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='index2.js'></script>   
+</head>
+<body>
+    <div>
+        <p>段落1</p>
+        标题前
+        <h1 id='d1' class='c1'>一级标题</h1>
+        标题后
+        <p>段落2</p>
+    </div>
+    <script>
+        //获取元素节点
+        var h1 = $('h1');
+        var div = $('div');
+        //获取父节点
+        console.log(h1.parentNode);
+        //获取子节点数组
+        console.log(div.childNodes);
+        console.log(h1.childNodes);
+        console.log(div.children);
+        console.log(h1.children);
+        //获取兄弟节点
+        console.log(h1.previousSibling);
+        console.log(h1.nextSibling);
+        console.log(h1.previousElementSibling);
+        console.log(h1.nextElementSibling);
+        //获取属性节点数组 了解即可
+        console.log(h1.attributes);
+    </script>
+</body>
+</html>

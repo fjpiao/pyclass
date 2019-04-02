@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='index2.js'></script>
+    <style>
+    
+    div{
+        width:600px;
+        background-color:gold
+    }
+    table{
+        width:600px;
+        margin:30px 0;
+    }
+    table,th,td{
+        
+        background-color:gainsboro;
+        border : 1px solid black;
+        
+    }
+    </style>
+    <script>
+        function insert(){
+            //获取输入框的值
+            var inputname=$('input',0).value
+            var inputprice=$('input',1).value
+            var inputnumber=$('input',2).value
+            //获取父节点
+            var tbody=$('tbody')
+            //动态创建tr
+            var tr=document.createElement('tr')
+            //动态创建td
+            var tdName=document.createElement('td')
+            tdName.innerHTML=inputname;
+            var tdPrice=document.createElement('td')
+            tdPrice.innerHTML=inputprice
+            var tdNumber=document.createElement('td')
+            tdNumber.innerHTML=inputnumber
+            var tdOper=document.createElement('td')
+            tdOper.innerHTML='<button>修改</button><button>移除</button>';
+            //父子元素关联
+            tbody.appendChild(tr)
+            tr.appendChild(tdName);
+            tr.appendChild(tdPrice);
+            tr.appendChild(tdNumber);
+            tr.appendChild(tdOper);
+            
+        }
+        
+            
+    </script>
+</head>
+<body>
+<div>
+    <input type="text" name='itemname' value='商品名称'>
+    <input type="text" name='itemprice' value='商品价格'>
+    <input type="text" name='itemnumber' value='商品数量'>
+    <button onclick='insert()'>增加</button>
+</div>
+<table>
+    <tbody>
+        <tr>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品数量</th>
+            <th>操作</th>
+        </tr>
+    </tbody>
+</table> 
+
+
+    
+</body>
+</html>

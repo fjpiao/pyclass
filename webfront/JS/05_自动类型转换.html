@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //1.任意类型+string
+    var r1=10+'hello';//'10hello'
+    console.log(r1);
+    var r2='10' + '110';//'10110'
+    var r3=10 + '110';//'10110'
+    var r4=true + '10';//'true10'
+    var r5=15 + true +'10';//'2010'
+    var r6='10' + 15 + 5;//'10155'
+    var r7=true + undefined + '5'+true;//NaN5true
+    console.log(r5,r7);
+    //2.非字符串类型+number
+    var res1 = 10 + 10;
+    var res2 = 10 + true;//11
+    var res3 = 10 + undefined;//NaN
+    var res4 = 10 + NaN;//NaN
+    var res5 = 10 + null;//10
+    console.log(res1,res2,res3,res4,res5);
+    var res6 = 10 + '100';//'10100'
+    //3.boolean+boolean
+    var res7 = true + false;//1
+    var res8 = true + undefined;//NaN
+    var res9 = true + null;//1
+    console.log(res7,res8,res9);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

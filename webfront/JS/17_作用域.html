@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //全局变量和全局函数
+    var a=100;
+    
+    function f1(){
+        //局部变量
+        var b=100;
+        c=200;
+        var a=1000;
+        console.log('function',a,b,c);
+    }
+    var b;
+    f1();    
+    console.log('全局',a,b,c);
+
+    function fn(){
+
+        function f2(){
+            console.log('f2',a);
+            }
+        f2();//函数只能被上级作用域调用
+        return f2;
+        }
+    var res=fn();
+    res();
+    
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

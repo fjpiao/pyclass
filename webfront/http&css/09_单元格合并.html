@@ -1,0 +1,57 @@
+<!-- 声明文档类型，便于正确解析html标签和css样式 -->
+<!doctype html>
+<!-- 文档的开始 -->
+<html>
+    <!-- 文档头部,用于设置字符集 选项卡图标 网页标题 网页的补充信息 外部资源引入 -->
+    <head>
+        <meta charset='utf-8'/>
+        <title>lesson sample</title>
+    </head>
+    <!-- 文档主体 -->
+    <body>
+    <table border='5px' width='500px' height='300px'>
+        <thead>
+        <!-- 表头行分组:将一行或若干行分为一组，作为表头 -->
+        <tr>
+            <!-- 自己占3个单元格位置 -->
+            <td colspan="3">姓名:</td>
+            <td colspan="3">班级:</td>
+        </tr>    
+        </thead>
+        <tfoot>
+            <!-- 表尾行分组 -->
+            <tr>
+                <td colspan='6'>合计</td>
+            </tr>
+        </tfoot>
+        <tbody>
+        <tr>
+                <td rowspan='3'>上午</td>
+                <td>姓名:</td>
+                <td>姓名:</td>
+                <td rowspan='3'>下午</td>
+                <td>姓名:</td>
+                <td>姓名:</td>
+        </tr>
+        <tr>
+                <td>姓名:</td>
+                <td>姓名:</td>
+                <td>姓名:</td>
+                <td>姓名:</td>
+               
+        </tr>
+        <tr>
+                <td>姓名:</td>
+                <td>姓名:</td>
+                <td>姓名:</td>
+                <td>姓名:</td>
+                
+        </tr>    
+        </tbody>
+        
+
+
+    </table>
+    </body>
+    <!-- 文档结束 -->
+</html>

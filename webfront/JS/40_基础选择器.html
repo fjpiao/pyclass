@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='jquery-1.11.3.js'></script>
+</head>
+<body>
+    <h1 id='d1'>一级标题</h1>
+    <h1 class='c1'>一级标题</h1>
+    <h1>一级标题</h1>
+    <h1 class='c1'>一级标题</h1>
+    <p>段落</p>
+    <script>
+        $('h1').html('动态修改');
+        $('#d1').css('color','red');
+        $('.c1').css('color','green');
+        $('.c1,p').css('background-color','orange');
+    </script>
+</body>
+</html>

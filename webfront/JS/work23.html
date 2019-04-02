@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='jquery-1.11.3.js'></script>
+    <style>
+    ul,ol{
+        margin:0;
+        padding:0;
+        list-style:none;        
+    }
+    ul{
+        width:150px;
+        background:orange;
+        text-align:center;
+    }
+    ol{
+        display:none;
+    }
+    .address:hover ol{
+        display:block;
+    }
+    ol li:hover{
+        background:gray;
+    }
+    ul{
+        width:150px;
+        background:orange;
+        text-align:center;
+        cursor:default;
+    }
+    #banner{
+        width:990px;
+        height: 207px;
+        margin:0 auto;
+    }
+    img{
+        width:990px;
+        height: 207px;
+        display:none;
+    }
+    /*匹配第一个图片元素*/
+    img:first-child{
+        display:block;
+    }
+    </style>
+    <script>
+        // window.onload = function (){
+        //     //获取内层列表
+        //     var ol = document.getElementsByTagName('ol')[0];
+        //     var lis = ol.children;//数组
+        //     //获取地址标签
+        //     var span=document.getElementsByTagName('span')[0];
+        //     //添加点击事件
+        //     for(var i=0;i<lis.length;i++){
+        //         lis[i].onclick = function (){
+        //             //取值 this指代当前被点击的元素
+        //             span.innerHTML=this.innerHTML;
+        //         };
+        //     };
+        // };
+        $(function (){
+            //jquery内部会遍历数组，分别为元素添加事件
+            $('ol li').click(function(){
+                //this指代事件的触发对象
+                $('span').html($(this).html())
+            });
+        });
+    </script>
+</head>
+    <body>
+        <ul>
+            <li class='address'>
+                <span>北京</span>
+                <ol>
+                    <li>北京</li>
+                    <li>上海</li>
+                    <li>广州</li>
+                    <li>深圳</li>
+                </ol>
+            </li>
+
+        </ul>
+        <div id='banner'>
+            <img src='img-js/banner1.jpg'>
+            <img src='img-js/banner2.jpg'>
+            <img src='img-js/banner3.jpg'>
+        </div>
+        <script>
+            var imgIndex=0;
+            function autoPlay(){
+                //当前图片隐藏
+                //eq(index)指定下标获取jquery对象
+                $('img').eq(imgIndex).css('display','none')
+                //下标后移取图片
+                imgIndex++;
+                if(imgIndex==$('img').length){
+                    imgIndex=0;
+                }
+                //设置图片显示
+                $('img').eq(imgIndex).css('display','block');
+            }
+            //设置监听
+            var timer = setInterval(autoPlay,1000);
+            
+            
+            $('img').mouseover(function (){
+                clearInterval(timer);
+            });
+
+            $('img').mouseout(function (){
+                timer=setInterval(autoPlay,1000);
+            })
+        </script>
+    </body>
+</html>

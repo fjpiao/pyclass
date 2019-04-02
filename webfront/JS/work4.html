@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //日期计算
+    /*
+    1.整月天数的累加
+    2.当前月天数的累加
+    */
+    var year = prompt('请输入年份');
+    var month = prompt('请输入月');
+    //转换number做天数累加
+    var day = Number(prompt('请输入日'));
+    
+    var sum = 0;//记录总天数
+    var isRun = year%4==0&&year%100!=0||year%400==0;
+    //判断平闰年
+    //天数累加
+    if(month==1){
+        sum+=day;
+    }else if(month == 2){
+        sum=31+day;
+    }else if(month == 3){
+        sum=31+28+day;
+    }else if(month == 4){
+        sum=31+28+31+day;
+    }//懒得写后面的月份了
+    //闰年,2月多加一天
+    if(isRun && month>2){
+        sum+=1;
+    }
+
+    
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+//1.每隔1秒在控制台输出系统时间
+    function start(){
+        //开启定时器
+        timer = setInterval(function (){
+            var date = new Date();
+            console.log(date);
+        },1000);
+    }
+    function stop(){
+        clearInterval(timer);
+    }
+//2.实现5秒的倒计时
+    i = 5;//必须设成全局变量
+    var timerID = setInterval(function (){    
+        if (i==1){
+            //停止定时器
+            clearInterval(timerID);
+        }
+        console.log(i);
+        i--;
+    },1000)
+//3.询问用户是否需要关闭当前的窗口，如果确定，3秒后关闭窗口
+    var res = confirm('是否关闭当前窗口?');
+    if (res){
+        setTimeout(function (){
+            window.close();
+        },3000);
+    }
+    </script>
+</head>
+<body>
+    <button onclick='start()'>开始</button>
+    <button onclick='stop()'>结束</button>   
+</body>
+</html>

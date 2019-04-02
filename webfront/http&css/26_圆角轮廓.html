@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>lesson sample</title>
+        <style>
+        div,h1{
+            width:300px;
+            height:200px;
+        }
+        div{
+            background-color:red;
+            /* 按照上右下左的顺序 分别设置四个角的圆角半径(以左上角为起点 顺时针表示) */
+            border-radius:20% 1000% 40px 50px;
+            /* 
+            一个值 四个角
+            两个值 对角一致 
+            三个值 左上 右上 下边一致
+            四个值 左上角为起点 顺时针
+            */
+        }
+        h1{
+            background-color:green;
+            border-radius:50%;
+        }
+        h1:hover{
+            background-color:orange;
+            border-radius:25%
+        }
+        </style>
+    </head>
+    <body>
+<div></div>
+<h1></h1>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='jquery-1.11.3.js'></script>
+</head>
+<body>
+    <h1 id='d1'>标题</h1>
+    <h1 class='c1'>标题</h1>
+    <h1 id='ad2' class='c2'>标题</h1>
+    <script>
+        $('[id]').css('color','red');
+        $('[class="c1"]').css('color','green');
+        $('[id*=d]').css('font-style','italic');
+        $('[class^=c]').css('background','gray');
+        $('[id$=1]').css('font-size','12px');
+    </script>
+</body>
+</html>

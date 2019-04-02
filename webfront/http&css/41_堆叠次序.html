@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>lesson sample</title>
+        <style>
+        div{
+            width:200px;
+            height:200px;
+            background: red;
+        }
+        #d1{
+            position:relative;
+            top:100px;
+            left:100px;
+            z-index:1001;
+            
+        }
+        #d2{
+            background:green;
+            z-index:1000;
+            position:relative;
+            left:100px;
+            bottom:100px;
+        }
+        #d1:hover {
+            z-index:100;
+        }
+
+
+        </style>
+    </head>
+    <body>
+        
+<div id='d1'></div>
+<div id='d2'></div>
+    </body>
+</html>

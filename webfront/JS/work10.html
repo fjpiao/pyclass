@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //循环录入并输出
+    function showArray(){
+        var arr=[];//空数组
+        while(data!='exit'){           
+            var data=prompt('输入内容：');
+            //存储到数组 length自动增长
+            arr[arr.length]=data;
+            
+        };
+        //打印
+        for(index in arr){
+            console.log(index)
+        }
+    }
+    showArray();
+    //找最大值
+    function maxNum(){
+        var arr2=[2,4,65,6,2,7]
+        //数组中的元素作为max初始值
+        var max=arr2[0]
+        for(index in arr2){
+            console.log(index);
+            if (arr2[index]>max){max=arr2[index]};
+        }
+        console.log(max);
+    }
+    maxNum()
+    </script>
+    
+    
+</head>
+<body>
+
+</body>
+</html>

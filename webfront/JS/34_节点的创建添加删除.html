@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='index2.js'></script>   
+</head>
+<body>
+    <script>
+        //创建
+        var h1 = document.createElement('h1');
+        h1.innerHTML='一级标题';
+        h1.id='d1';
+        console.log(h1);
+        //添加
+        console.log(document);
+        //body作为document对象的属性存在，可以直接访问
+        document.body.appendChild(h1);
+        document.body.appendChild(h1);
+        document.body.appendChild(h1);
+        //页面元素与节点对象一一对应
+        //需要几个页面元素，就创建几个节点
+        var h2 = document.createElement('h2');
+        var text = document.createTextNode('动态添加');
+        //文本节点作为内容，必须以子节点的方式添加至元素节点中
+        h2.appendChild(text);
+        document.body.insertBefore(h2,h1);
+        
+        //移除子节点
+        document.body.removeChild(h1);
+        
+
+
+    </script>
+</body>
+</html>

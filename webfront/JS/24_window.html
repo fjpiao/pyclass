@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+        console.log(window);
+        //方法
+        console.log(window.alert('警告框'))
+        //点击确定，获取并返回输入框中的字符串，点击取消返回null
+        var res = window.prompt('请输入')
+        console.log(res);
+        //确认框
+        var res2=confirm('是否确定');
+        console.log(res2);
+        
+
+
+    </script>
+</head>
+<body>
+    <!-- 打开网页 -->
+    <button onclick='window.open("http://www.baidu.com")'>open</button>
+    <!-- 关闭当前窗口 -->
+    <button onclick='window.close()'>close</button>
+</body>
+</html>

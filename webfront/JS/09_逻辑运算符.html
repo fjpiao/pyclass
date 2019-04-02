@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //&&
+    var r1= 5 > 10 && 1 < false;//f
+    var r2= 5 < 10 && 1 < false;//f
+    var r3= 5 < 10 && 1 > false;//t
+    console.log(r1,r2,r3);
+    //||
+    var r4= 5 > 10 || 1 < false;//f
+    var r5= 5 < 10 || 1 < false;//t
+    var r6= 5 < 10 || 1 > false;//t
+    var r7= 5>10 && 1<false && '10'>'5';
+    var year=2020;
+
+    //判断闰年:能被400整除或能被4整除不能被100整除
+    var res=year%400==0 || (year%4==0 && year%100!=0); 
+    console.log(res);
+
+    //逻辑非
+    var res1= !(5>3);//false
+    var res2= !5 > 3;//false
+    var ischecked = false;
+    !checked;'标识状态切换'
+    </script>
+</head>
+<body>
+
+</body>
+</html>

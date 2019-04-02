@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //创建正则表达式
+    var reg1 = /知乎/g;
+    var reg2 = /\d{6}/;
+    //new ReExp('正则格式','修饰符');
+    var reg3 = new RegExp('知乎','ig');
+    //字符串中的\表示转义字符，'\\'表示 '\'
+    var reg4 = new RegExp('\\d{6}','ig');
+    console.log(reg1,reg3);
+    console.log(reg2,reg4);
+    var str='上知乎，搜';
+    
+    console.log('before',reg1.lastIndex);
+    var r1=reg1.test(str)
+    console.log('after',reg1.lastIndex,'下次匹配的起始下标');
+    console.log(r1)
+    var r2=reg1.test(str)
+    console.log(r2)
+    //手动调整lastIndex
+    reg1.lastIndex=0
+    var r2=reg1.test(str)
+    console.log('调整后',r2)
+
+    //不设置全局匹配 每次都从下标为0开始查找
+    var reg5=/知乎/;
+    var r3=reg5.test(str)
+    var r4=reg5.test(str)
+    var r5=reg5.test(str)
+    console.log(r3,r4,r5,'lastIndex:',reg5.lastIndex);
+    </script>
+
+    
+</head>
+<body>
+
+</body>
+</html>

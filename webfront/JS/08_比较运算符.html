@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //1.number 与其他类型比较 字符串转换数字 NaN参与一律为false
+    var r1=10>5;//true
+    var r2=10>'5';//true
+    var r3=10>'5a';//false
+    console.log(r1,r2,r3);
+    var r4=10>true;//true
+    var r5=10>null;//true
+    console.log(r4,r5);
+    //2.字符串之间的比较
+    var r6='5'>'12';//true
+    console.log(r6);
+    var r7='tom'>'Jerry';//true
+    var r8='张三'>'张三丰';//false 空与'丰'比较
+    console.log(r8);
+    //3.布尔类型 转换数值
+    var res1=true>false;//true1>0
+    var res2=true>'100';//f
+    var res3=true>100;//f
+    var res4=true>null;//t
+    var res5=true>undefined;//false NAN参与比较
+    var res6=true<'aa';//false 转换数值失败
+    console.log(res1,res2,res3,res4,res5,res6)
+    //相等与全等
+    var s1=10=='10';//t
+    var s2=10==='10';//f
+    console.log(s1,s2);
+    var s3=10 !='10';//false
+    var s4=10 !=='10';//true
+    console.log(s3,s4);
+    
+    </script>
+</head>
+<body>
+
+</body>
+</html>

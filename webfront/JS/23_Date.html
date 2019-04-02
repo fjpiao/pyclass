@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+        //创建日期对象
+        var date1 = new Date();//根据当前系统时间创建对象
+        console.log(date1);
+        //Fri Mar 22 2019 16:08:25 GMT+0800 (中国标准时间)
+
+        //指定日期时间创建对象(年月日必填)
+        var date2 = new Date('2020/1/1');
+        console.log(date2);
+        //Wed Jan 01 2020 00:00:00 GMT+0800 (中国标准时间)
+        var date3 = new Date('2020/5-1 11:11:11');
+        console.log(date3)
+        //Fri May 01 2020 11:11:11 GMT+0800 (中国标准时间)
+        
+        //不填年月日时
+        var date4 = new Date('12:12:12')
+        console.log(date4)
+        //Invalid Date
+
+        //方法  
+        var year = date1.getFullYear();//提取四位的年
+        console.log(year);
+        var year = date1.getYear();//返回当前年-1900的值
+        console.log(year);
+        var month = date1.getMonth();//返回当前月 范围0-11
+        console.log(month);
+        var date = date1.getDate();//返回日期
+        console.log(date);
+        var day = date1.getDay();//返回星期 0-6(0-Sunday)
+        console.log(day);
+        var hour=date1.getHours();//小时
+        var min=date1.getMinutes();//分钟
+        var sec=date1.getSeconds();//秒
+        console.log(hour,min,sec);
+
+        //转换日期格式
+        var s1=date1.toLocaleString();
+        console.log(s1);
+        //2019/3/22 下午4:28:55
+        var s2=date1.toLocaleDateString();
+        var s3=date1.toLocaleTimeString();
+        console.log(s2);//2019/3/22
+        console.log(s3);//下午4:28:55
+        
+    </script>
+
+    
+</head>
+<body>
+
+</body>
+</html>

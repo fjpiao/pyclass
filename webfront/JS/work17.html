@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <input type='text' name=''>
+    <button onclick='show()'>显示</button>
+    <div></div>
+    <script>
+        function show(){
+            //获取元素
+            var input=
+            document.getElementsByTagName('input')[0];
+            var div=
+            document.getElementsByTagName('div')[0];
+            //传值
+            var str=input.value;
+            div.innerHTML='<h1>'+input.value+'</h1>';
+        }
+    </script>
+</body>
+</html>

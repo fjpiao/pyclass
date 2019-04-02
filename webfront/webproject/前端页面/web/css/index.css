@@ -1,0 +1,59 @@
+/* 页面的基础样式 */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+body{
+    font:12px youyuan,Arial;
+    color:#ccc;
+    background: #F1F3F4;
+    padding-top:50px;
+}
+a{
+    color:#7F8081;
+    text-decoration:none;
+}
+input:focus{
+    outline:none;
+}
+/* 外部容器的样式 */
+#container{
+    width:1000px;
+    margin:0 auto;
+}
+
+/* 1.顶部 */
+#top{
+    height:50px;
+}
+#logo,#search
+#search{
+    margin-left:113px;
+    position:relative;
+}
+#search input{
+    height:36px;
+    border:1px solid #999;
+    border-radius:18px;
+    padding:0 10px;
+    background:#f5f5f5;
+}
+#search a{
+    position:absolute;
+    top:0;
+    right:0;
+}
+#search img{
+    widows:38px;
+    height:38px;
+}
+/* 顶部导航 */
+#top-nav li{
+    float:left;  
+}
+#top-nav b{
+    border-left:1px solid #ccc;
+    margin:0 15px;
+}
+

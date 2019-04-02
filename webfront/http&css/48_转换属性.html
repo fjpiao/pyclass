@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>lesson sample</title>、
+        <style>
+        div{
+            width:200px;
+            height:200px;
+            background:red;
+            transition:5s;
+            transform-origin:0 0;
+            margin:200px auto;
+        }
+        div:hover{
+            /* transform: translate(100px,100px); */
+            /* transform:scale(-1); */
+            /* 旋转会连带坐标轴一起转，影响平移变换 
+            注意代码书写顺序 */
+            transform:rotate(45deg) translate(100px,100px);
+        }
+
+        </style>
+    </head>
+    <body>
+<div>123</div>
+    </body>
+</html>

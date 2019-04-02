@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+        // function start(){
+        //     //开始间歇调用
+        //     timerID=setInterval(function(){
+        //         console.log('间歇调用')
+        //     },1000);
+        // }
+        // function stop(){
+        //     //关闭间歇调用
+        //     clearInterval(timerID);
+        // }        
+        function start(){
+            //开始超时调用
+            timerID=setTimeout(function(){
+                console.log('超时调用')
+            },10000);
+        }
+        function stop(){
+            //关闭(打断)超时调用
+            clearTimeout(timerID);
+        }  
+
+    </script>
+</head>
+<body>
+    <button onclick='start()'>open</button>
+    <button onclick='stop()'>close</button>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //创建字符串
+    var s1='hello';
+    var s2 = new String('hello world');
+    console.log(s1,s2);
+    //字符串的遍历
+    for(var i = 0; i < s2.length;i++){
+        //console.log(s2[i]);
+    }
+    //1.转换大小写字母
+    var s3 = 'Hello';
+    var str1=s3.toUpperCase();//方法调用
+    var str2=s3.toLowerCase();
+    console.log(str1,str2,s3);
+    //2.获取字符或字符编码
+    var r1 = s3.charAt(1);
+    var r2 = s3.charCodeAt(1);
+    console.log(r1,r2);
+    //3.根据字符查找下标
+    var r3 = s3.indexOf('l');//2
+    var r4 = s3.lastIndexOf('l');//3
+    console.log(r3,r4)
+    var r3 = s3.indexOf('ll');//2
+    var r4 = s3.lastIndexOf('ll');//2
+    console.log(r3,r4)
+    var r3 = s3.indexOf('l',1);//2
+    var r4 = s3.lastIndexOf('l',1);//-1
+    console.log(r3,r4)
+    //4.截取字符串
+    var r5=s3.substring(0,2);//He
+    console.log(r5);
+    var r6=s3.substring(2);//llo
+    console.log(r6);
+    //5.分隔字符串
+    var s4 = '2020-12-25';
+    var r7 = s4.split();//["2020-12-25"]
+    var r8 = s4.split('/');//["2020-12-25"]
+    var r9 = s4.split('-');// ["2020", "12", "25"]
+    console.log(r7,r8,r9)
+    //6.模式匹配
+    var s5='上知乎，搜知乎，问知乎，答知乎';
+    //查找指定内容
+    var res1 = s5.match('知乎');
+    //创建正则表达式
+    var reg1 = /知乎/g;
+    var res2 = s5.match(reg1);
+    console.log(res1,res2);
+    //查找并替换
+    var res3 = s5.replace('知乎','1');
+    var res4 = s5.replace(/知乎/g,'11')
+    console.log(res3,res4,s5)
+
+
+
+    </script>
+
+    
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='index2.js'></script>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background:red;
+        }
+    </style>
+    <script>
+        window.onload = function (){
+            var div = $('div');
+            div.onclick = function (event){
+                //鼠标在元素坐标系中的位置 
+                console.log(event.offsetX,event.offsetY);
+                //鼠标在页面坐标系中的位置
+                console.log(event.clientX,event.clientY);
+                //鼠标在屏幕坐标系中的位置
+                console.log(event.screenX,event.screenY);
+                console.log(event.target);
+            };
+            onkeydown = function (e){
+                console.log('onkeydown:',e.key,e.which);
+                console.log(e.target)
+            };
+            onkeypress = function (e){
+                console.log('onkeypress:',e.key,e.which)
+            }
+            // onkeydown: a 65
+            // onkeypress: a 97
+           
+            // onkeydown: A 65
+            // onkeypress: A 65
+        }
+    </script>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>

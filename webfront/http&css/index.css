@@ -1,0 +1,7 @@
+h1{
+    /*文本的水平居中*/
+    text-align:center;
+    /*文本斜体展示*/
+    font-style:italic;
+    color:red
+}

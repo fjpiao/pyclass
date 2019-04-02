@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //1.从邮箱字符串中提取用户名及服务商
+    addr='zhangsan@gmail.com'
+    function at(addr){
+        var index_at=addr.indexOf('@');
+        return index_at
+    }
+    function user(addr){    
+        return addr.substring(0,at(addr))
+    }
+    function server(addr){
+        return addr.substring(at(addr)+1)
+    }
+    console.log('用户名:',user(addr),'服务商:',server(addr))
+    //2.身份证
+    carID='100100190012251234'
+    function getInfo(carID){
+        var year=carID.substring(6,10);
+        var month=carID.substring(10,12);
+        var day=carID.substring(12,14);
+        console.log(year,'.',month,'.',day);
+    }
+    getInfo(carID)
+    </script>
+    
+    
+</head>
+<body>
+    
+</body>
+</html>

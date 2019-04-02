@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    
+</head>
+<body>
+    <h1>标题1</h1>
+    <h1 class='c1'>标题2</h1>
+    <h1 id='d1'>标题3</h1>
+    <h1 class='c1'>标题4</h1>
+    <h1>标题5</h1>
+    <h1 id='d1'>标题6</h1>
+    <input type='checkbox' name='hobby' value='sing'>
+    <input type='checkbox' name='hobby' value=''>
+    <input type='checkbox' name='hobby' value=''>
+    <input type='text' name='uname' value='d'>
+    <button onclick='show()'>显示</button>
+    <script>
+        //先加载元素，再获取
+        var res = document.getElementsByTagName('h1');
+        console.log(res);
+        //动态修改标签内容 res[0] 获取元素节点对象
+        res[0].innerHTML = '<a href="">超链接</a>';
+        
+        var res2=document.getElementsByClassName('c1');
+        console.log(res2);
+        res2[0].innerText = '<a href="">超链接</a>';
+
+        var res3=document.getElementById('d1');//重复ID只取第一个
+        console.log(res3);
+        res3.innerHTML='动态修改';
+
+        var btns=document.getElementsByName('hobby');
+        var input = document.getElementsByName('uname');
+        console.log(btns,input);
+        function show(){
+            console.log(btns[0].value);
+            console.log(input[0].value);
+        }
+
+
+        
+    </script>
+</body>
+</html>

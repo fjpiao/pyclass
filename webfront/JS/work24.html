@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='jquery-1.11.3.js'></script>
+    <style>
+    </style>
+    <script>
+   
+    </script>
+</head>
+<body>
+    <div>
+        全选
+        <input type='checkbox' id='all'>
+        
+        <input type='button' id='reverse' value="反选">
+    </div>
+    <span id='ar'>
+        <input type='checkbox' value='1'>
+        <input type='checkbox' value='1'>
+        <input type='checkbox' value='1'>
+        <input type='checkbox' value='1'>
+    </span>
+
+    <script>
+        $('#all').change(function(){
+            if($(this).prop('checked')==true){
+                $('#ar input').prop('checked',true);
+            }else{$('#ar input').prop('checked',false);}  
+        })
+        console.log($('#ar input'))
+        $('#reverse').click(function(){
+            for(var i=0;i<$('#ar input').length;i++){
+                if($('#ar input').eq(i).prop('checked')==false){
+                    $('#ar input').eq(i).prop('checked',true);
+                }else{
+                    $('#ar input').eq(i).prop('checked',false);
+                }
+            }
+              
+        })
+
+    </script>
+    
+</body>
+</html>

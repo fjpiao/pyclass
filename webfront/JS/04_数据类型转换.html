@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //转换字符串类型
+    var a=100,b=true,c=undefined,d=null,s1='100',s2='hello';
+        console.log(typeof a.toString());
+        console.log(typeof b.toString());
+        // console.log(typeof c.toString());
+        // console.log(typeof d.toString());
+        console.log(a,b,c,d);
+        //转换number 整体转换
+        console.log(Number('hre'));//NaN
+        console.log(Number('100'));//100
+        console.log(Number('100a'));//NaN
+        console.log(Number(true));//1
+        //解析number 转换成字符串解析
+        console.log(parseInt(35.5));
+        console.log(parseInt('35.5'));
+        console.log(parseInt(true));
+        console.log(parseInt('4.1a'));//4
+        console.log(parseInt('a3'));//NaN
+        //转换布尔
+        console.log(Boolean(100));//T
+        console.log(Boolean('0'));//T
+        console.log(Boolean(0));//F
+        console.log(Boolean(0.0));//F
+        console.log(Boolean(''));//F
+        console.log(Boolean(null));//F
+        console.log(Boolean(NaN));//F
+        console.log(Boolean(undefined));//F
+        //解析小数,只有第一次出现的小数点为合法小数点
+        console.log(parseFloat('35.5.3'));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

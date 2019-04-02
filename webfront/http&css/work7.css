@@ -1,0 +1,54 @@
+/* 清除默认样式 */
+body,p{
+    margin:0;
+    font-size:14px;
+}
+a{
+    text-decoration:none;
+}
+/* 主体 */
+#main{
+    width:990px;
+    margin:20px auto;
+}
+#main .title{
+    height:42px;
+    border-top:1px solid #ccc;
+    padding-top:15px;
+    padding-bottom:10px;
+    line-height:42px;
+}
+#main .title a{
+    float:right;
+    color:#000;
+}
+/* 商品列表 */
+#main .goodsList{
+    overflow:hidden;
+}
+#main .item{
+    float:left;
+    width:190px;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+/* 商品大图 */
+#main .goodsImg{
+    width:190px;
+    height:190px;
+}
+#main .cart{
+    float:right;
+}
+#main .item p{
+    margin:5px 2px;
+}
+#main .item span{
+    margin-left:10px;
+}
+#main .no-margin{
+    margin-right:0;
+}
+
+
+

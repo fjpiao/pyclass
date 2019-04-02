@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+<script>
+var a=10;
+a ++;
+console.log(a);//11
+++ a;
+console.log(a);//12
+//结合使用
+var b=10;
+var r1=b++;
+console.log(r1,b);//10,11
+var r1=++b;
+console.log(r1,b);//12,12
+var r3=b++ + ++b;
+/*
+r1=b++=12 
+b++-> b=13
+r2=++b=13+1=14
+r3=r1+r2=26
+*/
+console.log(r3);//26
+var n=5;
+var res=n++ + ++n + n++ + ++n +n;
+//5+7+7+9+9 
+console.log(res);//37
+
+console.log(r3);
+</script>
+</head>
+<body>
+
+</body>
+</html>

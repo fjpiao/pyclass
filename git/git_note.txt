@@ -146,8 +146,10 @@ git rm [file] 删除文件
 连接github
 git remote rm origin
     解除之前的连接
-git remote add origin https://github.com/fjpiao/tarenaAID1812.git
+git remote add origin https://github.com/fjpiao/pyclass.git
     创立连接
+git clone https://github.com/fjpiao/pyclass.git
+    克隆内容
 git push -u origin master
     上传内容
 

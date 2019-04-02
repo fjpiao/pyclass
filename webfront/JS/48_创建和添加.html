@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='jquery-1.11.3.js'></script>
+    
+</head>
+<body>
+    <input type="text" name='itemname' value='商品名称'>
+    <input type="text" name='itemprice' value='商品价格'>
+    <input type="text" name='itemnumber' value='商品数量'>
+    <button onclick='show()'>点击</button>
+    <script>
+        function show(){
+            console.log($('input').val());//默认返回第一个元素的值
+            console.log($('input').eq(1).val())//eq方法
+            console.log($('[name=gname]').val())//属性区分
+        }
+    </script>    
+    <script>
+        var div = $('<div></div>');
+        console.log(div);
+        div.html('动态创建div').attr('id','d1');
+        console.log(div);
+        var h1=$('<h1 id="d2">标题</h1>')
+        //作为子元素添加
+        $('body').append(div);
+        $('body').prepend(h1);
+        $('body').append(h1);//添加已有节点 会替换前一个
+        //兄弟元素添加
+        var h2 = $('<h2>二级标题</h2>');
+        var h3 = $('<h3>三级标题</h3>');
+        div.before(h2);
+        div.after(h3);
+        //删除
+        h3.remove();
+
+    </script>
+</body>
+</html>

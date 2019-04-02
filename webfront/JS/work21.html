@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='index2.js'></script>
+    <style>
+    #banner{
+        width:990px;
+        height: 207px;
+        margin:0 auto;
+    }
+    img{
+        width:990px;
+        height: 207px;
+        display:none;
+    }
+    /*匹配第一个图片元素*/
+    img:first-child{
+        display:block;
+    }
+    </style>
+    <script>
+     
+    </script>
+</head>
+    <body>
+        <div id='banner'>
+            <img src='img-js/banner1.jpg'>
+            <img src='img-js/banner2.jpg'>
+            <img src='img-js/banner3.jpg'>
+        </div>
+        <script>
+            var div = $('div');
+            var imgs = div.children;
+            var imgIndex=0;
+            function autoPlay(){
+                //当前图片隐藏
+                imgs[imgIndex].style.display='none';
+
+                //下标后移取图片
+                imgIndex++;
+                if(imgIndex==imgs.length){
+                    imgIndex=0;
+                }
+                //设置图片显示
+                imgs[imgIndex].style.display='block';
+            }
+            //设置监听
+            var timer = setInterval(autoPlay,1000);
+            
+            div.onmouseover = function (){
+                //鼠标移入，停止播放
+                clearInterval(timer);
+            };
+            div.onmouseout = function (){
+                //鼠标移出，开启定时器
+                timer=setInterval(autoPlay,1000);//全局变量
+            };
+
+        </script>
+    </body>
+</html>

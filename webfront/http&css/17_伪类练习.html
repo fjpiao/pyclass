@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>lesson sample</title>
+        <style>
+        a
+        {
+            color:white;
+            background-color:orange;
+            text-decoration:none;
+        }
+        a:hover{
+            background-color:pink;
+        }
+        div{
+            width:200px;
+            height:200px;
+            background-color:red;
+        }
+        div:hover{
+            width:300px;
+            height:300px;
+            background-color:green;
+        }
+        ul,ol
+        {
+            /* 取消列表的项目符号 */
+            list-style:none; 
+            /* 清除默认的内边距 */
+            padding:0;
+            width:150px;
+            background-color:orange;
+        }
+        ol{
+            /* 默认隐藏 */
+            display:none;
+        }
+        /* 设置内层列表显示 */
+        ul>li:hover ol{
+            display:block;
+        }
+        ol li:hover {
+            background-color:gray;
+        }
+
+        </style>
+        
+    </head>
+    <body>
+        <a href=''>超链接</a>
+        <div>
+            <div></div>
+        </div>
+        <h1>下拉菜单</h1>
+        <ul>
+            <li >
+                设置
+                <ol>
+                    <li>高级设置</li>
+                    <li>高级设置</li>
+                    <li>高级设置</li>
+                    <li>高级设置</li>
+                </ol>
+            </li>
+        </ul>
+            <p>
+                    选择城市:
+                    <select name='city'>
+                        <option value='beijing'>北京</option>
+                        <option value='shanghai'>上海</option>
+                        <option value='guangzhou'>广州</option>
+                        <option value='shenzhen' selected>深圳</option>
+                    </select>
+            </p>
+    </body>
+</html>

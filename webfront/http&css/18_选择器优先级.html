@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>lesson sample</title>
+        <style>
+            /* 权重 10 */
+            .c1{
+                color:green;
+            }
+            /* 1 */
+            h1{
+                color:red;
+            }
+            /* 100 */
+            #d1{
+                color:blue;
+            }
+            /* 权重1+1 */
+            div h1{
+                color:orange;
+            }
+            /* 权重100+1 */
+            #box h1{
+                color:cyan;
+            }
+            /* 1+1+1 */
+            body div h1{}
+            /* 111 */
+            body #box .c1{}
+        </style>
+    </head>
+    <body>
+        <div id='box'>
+            <h1 id='d1' class='c1'>一级标题</h1>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+WEB 服务器端
+    1.Flask-轻量级WEB框架
+    2.AJAX-异步技术体现
+    3.Django-重量级的WEB框架
+    

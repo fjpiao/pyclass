@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='index2.js'></script>
+    <script>
+        window.onload = function(){
+            var form = $('form');
+            var uname = $('input');
+            var hobby = $('input',1);
+            //文本框获取焦点
+            uname.onfocus = function(){
+                console.log('获取焦点');
+            };
+            //文本框失去焦点
+            uname.onblur = function (){
+                console.log('失去焦点');
+                //this 指代事件的触发对象或函数的调用者
+                console.log(uname.value,'=',this.value)
+            };
+            //实时监听输入
+            uname.oninput = function(){
+                console.log('实时监听oninput',this.value);
+            };
+            //监听文本框内容是否发生变化
+            uname.onchange=function(){
+                //前后输入框的内容不一致时触发
+                console.log('内容改变onchange',this.value);
+            };
+            //监听按钮状态的改变
+            //<input checked = 'checked'>
+            hobby.onchange = function (){
+                console.log(this.checked);
+            };
+
+            //onsubmit事件由form监听，点击提交按钮时自动触发，
+            //检测表单数据是否可以发送，允许返回布尔值，
+            //ture表示发送，false表示阻止提交
+            form.onsubmit = function (){
+                if(uname.value.length == 0){
+                    //阻止提交
+                    return false;
+                }else{
+                    return true;
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <form action='login' method='' enctype=''>
+        用户名:<input type='text' name=''><br>
+        兴趣: <input type='checkbox' name='' value=''>
+        <br>
+        <input type='submit'>
+    </form>
+</body>
+</html>

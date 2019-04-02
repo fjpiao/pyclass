@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='index2.js'>
+    </script>
+</head>
+<body>
+    <input type='text'>
+    <button onclick='validate()'>验证</button>
+    <div></div>
+    <script>
+        function validate(){
+            //获取元素
+            var input=$('input');//外部JS中的函数
+            var div=$('div');
+            //获取用户名
+            var username=input.value;
+            //验证长度
+            if(username.length>=6&&username.length<=18){
+                div.innerHTML='用户名合法';
+                div.style.color='green';
+            }else{
+                div.innerHTML='用户名不合法';
+                div.style.color='red';
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>

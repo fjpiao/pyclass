@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='jquery-1.11.3.js'></script>
+    <style>
+        #d1{
+            color:red;
+        }
+        .c1{
+            background:green;
+        }
+        .c2{
+            font-size:20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>参考文本</h1>
+    <p>段落文本</p>
+    <h2>动态切换</h2>
+    <button onclick='toggle()'>切换</button>
+    <div></div>
+
+    <script>
+        $('h1').attr('id','d1').prop('class','c1 c2')
+        // $('h1').prop('class','c1').prop('class','c2')
+        //这样c2覆盖c1
+        //toggleClass有则删除，无则添加 动态切换
+        $('p').addClass('c1').addClass('c2').removeClass('c1');
+        function toggle(){
+            $('h2').toggleClass('c1');
+        }
+        // $('div').css('width','200px').css('height','200px').css('background','red');
+        $('div').css({
+            "width":"200px",
+            "height":"200px",
+            "background":"green"
+        });
+        
+    </script>
+    
+</body>
+</html>

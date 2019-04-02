@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    
+    function yanzheng(len){
+        var arr=['A','V','s','d',2,4]
+        var show=''
+        for(i=0;i<len;i++){
+            //生成随机下标[0,length)
+            var index=parseInt(Math.random()*arr.length);
+            show += arr[index];
+        }
+        return show;
+    }
+    function validate(){
+        var show = yanzheng(5);
+        //提示用户输入
+        var input=prompt('请输入验证码:'+show);
+        //验证
+        if(input.toUpperCase()==show.toUpperCase()){
+            alert('输入正确');
+        }else{
+            alert('输入有误');
+        }
+    }
+    </script>
+    
+    
+</head>
+<body>
+    <button onclick='validate()'>获取验证码</button>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+        var year = prompt('请输入年份');
+        var month = prompt('请输入月');
+        
+        var day = Number(prompt('请输入日'));
+        var sum = 0;//记录总天数
+        var isRun = year%4==0&&year%100!=0||year%400==0;
+        //1.计算从1990.1.1(星期一)开始的总天数
+        //2.对总天数取余
+        //从1990至今，整年天数的累加
+        for(var i=1990;i<year;i++){
+            sum+=365;
+            if(i%4==0&&i%100!=0||i%400==0){sum++}
+        }
+        //当前年整月天数累加
+        for(var j=1;j<month;j++){
+            switch(j){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                    sum+=31;
+                    break
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    sum+=30;
+                    break
+                case 2:
+                    sum+=28;
+                    if(isRun)//if省略括号 只控制其后的第一行语句
+                        sum++;
+                    break
+            }
+            j++
+        }
+        //累加当前月的天数
+        sum+=day;
+        //对7取余
+        var week=sum%7;
+        var show='';
+        switch(week){
+            case 0:
+                show='日'
+                break
+            case 1:
+                show='一'
+                break
+            case 2:
+                show='二'
+                break
+            case 3:
+                show='三'
+                break
+            case 4:
+                show='四'
+                break
+            case 5:
+                show='五'
+                break
+            case 6:
+                show='六'
+                break
+        }
+        console.log('星期',show)
+    </script>
+    
+    
+</head>
+<body>
+
+</body>
+</html>

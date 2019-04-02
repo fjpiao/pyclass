@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='jquery-1.11.3.js'></script>
+</head>
+<body>
+    <ul>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+    </ul>
+    <ul>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+    </ul>
+    <script>
+        $('li:first').css('color','red');//总体中的第一个
+        $('li:last').css('color','green');
+        $('li:first-child').css('background','orange');//单个父类中的子元素
+        $('li:last-child').css('background','pink');
+        $('li:nth-child(3)').css('font-size','24px')
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //1.根据输入查找下标
+    function queryIndex(){
+        var arr=[10,2,34,56,7,10];
+        var input = prompt('请输入数据');
+        /*方案1
+        var index=-1;
+        for(i in arr){
+            if(arr[i] == input){
+                index=i;
+            }
+        }
+        */
+        var index;
+        var isInd = false;
+        for(i in arr){
+            if(arr[i]==input){
+                index=i;
+                isInd=true;
+            }
+        }
+        if(isInd){
+            console.log('查找成功',index);
+        }else{
+            index=-1;
+            console.log('查找失败',index);
+        }
+        console.log(input+'对应的下标为',index);
+    }
+    queryIndex();
+    //2.
+    function saveDate(){
+        var arr=[];
+        while(true){
+            var input=prompt('请输入');
+            if(input=='exit'){
+                break;
+            }
+            arr.unshift(input);
+        }
+        console.log(arr);
+    }
+    saveDate();
+    //进制转换
+    function decode2Bin(){
+        var num=prompt('请输入数字');
+        var arr=[];//保存余数
+        while(num!=0){
+            var r=num%2;
+            arr.unshift(r);
+            //重复除2,取整
+            num=parseInt(num/2);
+        }
+        var str=arr.join('');
+        console.log(num+'的二进制为:',str);
+    }
+
+    // //练习1
+    // var data=prompt('1.输入:');
+    // var arr=[1,2,3];
+    // function findValue(data,arr){
+    //     for(i in arr){
+    //         if (data==arr[i]){return i};
+    //         return -1;
+    //     }        
+    // }
+    // console.log(findValue(data,arr));     
+    // //2
+    // var arr=[]
+    // var data='';
+    // while(true){
+    //     data=prompt('2.输入:');
+    //     if(data=='exit'){break};
+    //     arr.push(data)
+    // }
+    // console.log(arr.reverse());
+    // //3
+    // var num=[]
+    // var data=prompt('3.输入:');
+    // data=Number(data)
+    
+    // while(true){
+    //     var a=data%2;
+    //     var data=data/2;
+    //     var data=parseInt(data);
+    //     num.push(a);
+    //     if(data==0){break};
+    // }
+    // console.log(num.reverse().join(''));
+   
+    </script>
+    
+    
+</head>
+<body>
+
+</body>
+</html>

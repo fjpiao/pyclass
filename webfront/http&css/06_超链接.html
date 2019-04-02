@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'/>
+<!-- 设置网页标题 -->
+<title>lesson sample</title>
+</head>
+<body>
+    <!-- 不指定href属性无法成为超链接 -->
+    <a>百度</a>
+    <!-- 省略协议时当成当前路径下查找文件 跳转失败-->
+    <a href='www.baidu.com'>百度2</a>
+    <!-- 添加'http://' 实现网络地址跳转 -->
+    <a href='http://www.baidu.com'>百度3</a>
+    <!-- 设定图片为超链接至本地网站 新建窗口打开  -->
+    <a href='work.html' target=_blank><img src='C:/Users/Python/Desktop/web/http&css/img/web.ico'></a>
+    <!-- 设定图片为超链接至本地图片  -->
+    <a href='./a.png'><img src='C:/Users/Python/Desktop/web/img-css/web.ico'></a>
+    <!-- 跳转到另一个网页的锚点位置 -->
+    <a href='07_锚点链接.html#bottom'>锚点位置</a>
+    
+    
+    <!-- 
+    href属性的特殊取值
+    为空 链接至本页 相当于刷新
+    为# 链接至本页，不刷新页面，会改变URL，同时#是锚点的标志
+    javascript:void(0) 链接至本页 既不会刷新页面 也不会修改URL
+    -->
+    <a href=''>href=''</a>
+    <a href='#'>href='#'</a>
+    <a href='javascript:void(0)'>javascript:void(0)</a>
+</body>
+</html>

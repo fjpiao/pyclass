@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    //1.无参数，无返回值的函数
+    function f1(){
+        alert('f1被调用');
+        return 
+    }
+    //函数调用
+    f1();
+    //2.有参数无返回值的函数
+    /*
+        函数声明时给出的参数为形式参数(代号)
+        function f1(形式参数){}
+        函数调用时给出的参数为实际参数，参与实际运算
+        f1(实际参数)
+        传参:函数调用时将实际参数传递给形式参数
+    */
+    function f2(a,b){
+       console.log(a-b,a,b);
+       //允许形参个数与实参不匹配，
+       console.log(arguments);
+       //函数内部可使用且只能在函数内部arguments属性查看实际传递的参数
+    }
+    f2(100);//实际参数个数少于形式参数，b默认为undefined
+    f2(100,10,1)//实际参数个数大于形式参数
+    //3.带有返回值函数
+    /*
+        1.return后面的代码不执行
+        2.return只能返回一个值 多个返回值取最后一个
+    */
+    function f3(a){
+        return a*a;
+    }
+    var r=f3(5);
+    console.log(r);//此处省略';'会报错
+    //4.匿名函数
+    //4.1匿名函数自执行:(匿名函数)(实参) 
+    (function (a){
+        alert('匿名函数被调用'+a);
+    })(100)
+    //参数在自执行
+    //4.2定义变量保存匿名函数(地址)
+    var fn=function (){
+        alert('变量保存匿名函数');
+    };
+    //变量名与函数名用法一致
+    console.log(fn);
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

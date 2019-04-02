@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+    var str='101_5&201_8&301_6';
+    var arr=str.split('&');//['101_5','201_8','301_6']
+    for(i in arr){
+        var s = arr[i];
+        var array = s.split('_');//['101','5']
+        console.log('商品id为:'+array[0]);
+        console.log('商品数量为:'+array[1]);
+    }
+    
+    
+    </script>
+    
+    
+</head>
+<body>
+    
+</body>
+</html>

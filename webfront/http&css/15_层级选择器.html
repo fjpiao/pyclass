@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>lesson sample</title>
+        <style>
+            #nav span{
+                color:red;
+            }
+            #nav>span{
+                font-size:100px;
+            }
+            /* 直接继承 */
+        </style>
+    </head>
+    <body>
+        <span>外层</span>
+        <div id='nav'>
+            <!-- 直接后代 -->
+            <span>导航中的文本</span>
+            <ul>
+                <li>
+                    示例
+                    <span>文本</span>
+                    <!-- 间接后代 -->
+                </li>
+            </ul>
+        </div>
+        <div id='main'>
+            <span>主体中的文本</span>
+        </div>
+    </body>
+</html>

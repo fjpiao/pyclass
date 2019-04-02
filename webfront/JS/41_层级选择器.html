@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='jquery-1.11.3.js'></script>
+</head>
+<body>
+    <div>
+        <span>div->span</span>
+        <h1>
+            <span>h1->span</span>
+        </h1>
+        <span>span2</span>
+        <span>span3</span>
+
+    </div>
+    <script>
+        $('div span').css('color','red');
+        $('div>span').css('color','green');//匹配不到内层
+        $('h1+span').css('background','green');
+        $('h1~span').css('background','orange');
+    </script>
+    
+</body>
+</html>

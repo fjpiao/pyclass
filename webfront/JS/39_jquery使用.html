@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='jquery-1.11.3.js'></script>
+</head>
+<body>
+    <h1>一级标题</h1>
+    <h1>一级标题</h1>
+    <h1>一级标题</h1>
+    <h1>一级标题</h1>
+    <script>
+        console.log($('h1'));
+        $('h1').html('<a href>超链接</a>');
+        $('h1').innerHTML = '哈哈';//无效
+        
+        var h1=$('h1')[0];//转原生
+        h1.setAttribute('id','d1');
+        console.log(h1);
+ 
+        //原生转jquery
+        console.log($(h1));
+        $(h1).html('转换成功');
+
+        $('h1').eq(3).html('<button>选择某个</button>');
+    </script>
+</body>
+</html>

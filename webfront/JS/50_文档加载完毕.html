@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='jquery-1.11.3.js'></script>
+    <script>
+/*
+    //原生多次书写onload相当于重新赋值 只会执行最后一个
+    window.onload=function(){
+        alert('第一次onload');
+    };
+    window.onload=function(){
+        alert('第二次onload');
+    };
+    window.onload=function(){
+        alert('第三次onload');
+    };
+*/
+    //jquery会执行所有
+    $(document).ready(function(){
+        alert('第一次ready()');
+    })    
+    $().ready(function (){
+        alert('第二次ready()');
+    })
+
+    $(function (){
+        //原生方法遍历数组
+        var arr=[10,20,30,40,50];
+        for(i in arr){
+            console.log('for-in:',arr[i]);
+        }
+        arr.forEach(function (element,index){
+            console.log('forEach',element,index);
+        });
+        //jquery的遍历方法
+        $(arr).each(function(index,element){
+            console.log('jquery-each:',index,element);
+        });
+        //遍历节点
+        $('h1').each(function(){
+            console.log(this.innerHTML,$(this).html());
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>标题1</h1>
+    <h1>标题2</h1>
+    <h1>标题3</h1>
+    <h1>标题4</h1>
+    <h1>标题5</h1>
+</body>
+</html>

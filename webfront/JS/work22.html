@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>lesson sample</title>
+        <script src='jquery-1.11.3.js'></script>
+        
+    </head>
+    <body>
+        <input type='text'>
+        <button onclick="show()">显示</button>
+        <div>
+            
+        </div>
+        <script>
+            function show(){
+                data=$('input').val();
+                $('div').html('<h1>'+data+'</h1>')
+            }
+        </script>
+    </body>
+</html>

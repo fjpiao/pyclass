@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script>
+        var a = 100;
+        console.log(a,window.a);
+        function f1(){
+            console.log('f1被调用');
+        };
+        f1();
+        window.f1();
+        console.log(window);
+        var b;//window.b
+        console.log(b);
+        
+
+
+    </script>
+</head>
+<body>
+    <button onclick='start()'>open</button>
+    <button onclick='stop()'>close</button>
+    <button onclick='history.go(-1)'>go(-1)</button>
+    <button onclick='history.go(-2)'>go(-2)</button>
+</body>
+</html>

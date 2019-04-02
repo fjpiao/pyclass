@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <title>JS</title>
+    <script src='jquery-1.11.3.js'></script>
+</head>
+<body>
+    <div>点击</div>
+    <h1>标题</h1>
+    <p>段落</p>
+    <p>段落</p>
+    <p>段落</p>
+    <script>
+        $('div').on('click',function(){
+            alert('div被点击');
+        })
+        $('h1').click(function (){
+            alert('h1被点击');
+        });
+        $('p').bind('mouseover',function(){
+            // this.css('color','red');报错
+            //this是原生元素 需要转成jquery元素
+            $(this).css('color','red');
+        })
+        $('p').bind('mouseout',function(){
+            $(this).css('color','black');
+        })
+    </script>
+</body>
+</html>
