@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>标签</h2>
+
+{#    如果params.age <= 18 青年#}
+{#            >18 and <50　中年#}
+{#            >=50       　老年#}
+
+<h2>
+    {{ params.name }}是
+    {% if params.age <= 18 %}
+    年轻
+    {% elif params.age >= 50 %}
+    老年
+    {% else %}
+    中年
+    {% endif %}
+    人
+</h2>
+<div>
+    {% for n in params.list %}
+        <p
+                {% if loop.first %}
+                    style="background:red"
+                {% elif loop.last %}
+                    style="background:yellow"
+                {% else %}
+                    style="background:deeppink"
+                {% endif %}
+        >{{ n }}</p>
+    {% endfor %}
+</div>
+<h1>过滤器</h1>
+<h2>age|abs:{{ params.age|abs }}</h2>
+{#abs(number)#}
+<h2>params.person|attr('name'):{{ params.person|attr('name') }}</h2>
+<h1>变量</h1>
+<h2>name:{{ params.name | truncate(6) }}</h2>
+<h2>age:{{ params.age }}</h2>
+<h2>list:{{ params.list }}</h2>
+<h2>list[0]:{{ params.list[0] }}</h2>
+<h2>tup:{{ params.tup }}</h2>
+<h2>tup.0:{{ params.tup.0 }}</h2>
+<h2>dic:{{ params.dic }}</h2>
+<h2>dic.n1:{{ params.dic.n1 }}</h2>
+<h2>person:{{ params.person }}</h2>
+<h2>person.name:{{ params.person.name }}</h2>
+<h2>person.hobby:{{ params.person.a1 }}</h2>
+</body>
+</html>

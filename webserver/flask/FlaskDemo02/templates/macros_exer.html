@@ -1,0 +1,12 @@
+{% macro showList(list) %}
+    {% for n in list %}
+        <li
+                {% if loop.index % 2==0 %}
+                    style="background: aqua"
+                {% else %}
+                    style="background: yellow"
+                {% endif %}>
+            {{ n }}
+        </li>
+    {% endfor %}
+{% endmacro %}

@@ -24,7 +24,7 @@ def pa(num=1):
 
 @app.route('/mytemp')
 def mytemp():
-    str = render_template('index.html')
+    str = render_template('index.html',name1='lalala',name2='hahaha')
     print(str)
     return str
 

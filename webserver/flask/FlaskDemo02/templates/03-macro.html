@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% macro showP(str) %}
+    <h1 style="background:orangered;color:#333;">
+        {{ str }}
+    </h1>
+{% endmacro %}
+
+<div class="container">
+    {{ showP('Hello World') }}
+</div>
+{#导入macros.html宏文件#}
+{% import 'macros01.html' as macros %}
+    {{ macros.show_msg('测试的宏') }}
+
+
+{% import 'macros_exer.html' as exer %}
+<ul>
+    {{ exer.showList(list) }}
+</ul>
+
+
+
+</body>
+</html>
