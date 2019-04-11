@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function submitForm(){
+        var form = document.getElementById("myform");
+        form.submit();
+}
+    </script>
+</head>
+<body>
+<form action="/teacherquery" id="myform" method="get" onchange="submitForm();">
+    <p>
+        课程:
+        <select id="selCourse" name='cid'>
+        <option value='0'>请选择</option>
+        {% for course in courses %}
+        <option value='{{ course.id }}'
+            {% if cid==course.id %}
+                selected
+            {% endif %}
+        >{{ course.cname }}</option>
+        {% endfor %}
+        </select>
+    </p>
+    <table border="1" width="600">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>所教课程</th>
+        </tr>
+        {% for teacher in teachers %}
+            <tr>
+                 <td>{{ teacher.tname }}</td>
+                 <td>{{ teacher.tage }}</td>
+                 <td>{{ teacher.course.cname }}</td>
+            </tr>
+
+        {% endfor %}
+
+    </table>
+</form>
+</body>
+</html>

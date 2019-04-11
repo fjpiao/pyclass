@@ -48,7 +48,7 @@ class Person(object):
         return self.name
 
 
-@app.route('/03-macro')
+@app.route('/')
 def macro():
     list = [1, 2, 3]
     return render_template('03-macro.html', list=list)
@@ -67,4 +67,4 @@ def child():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0')

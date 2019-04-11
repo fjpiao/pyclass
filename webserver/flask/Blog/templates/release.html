@@ -76,7 +76,7 @@
 			<p class="n1">表发博客</p>
 		</h1>
 		<div class="infosbox">
-			<form action="#" method="post">
+			<form action="/release" method="post" method="post" enctype = 'multipart/form-data'>
 				<br>
 				<p>
 					<input class="comment_input" id="author" maxlength="50" name="author" required="required" size="25" tabindex="1"
@@ -89,9 +89,13 @@
 					<input name="list" type="radio" value="2">公开博客
 					<input name="list" type="radio" value="3">其他博客
 				</p>
-
-				<br>
-
+        <bar>
+                <p>
+            <input type="file" name="picture">
+                </p>
+		</bar>
+                <br>
+<textarea name="content" cols="70" rows="10"></textarea>
 				<div id="editor" style="margin-left: 12px;margin-right: 12px"></div>
 				<br>
 				<p>
